@@ -1,6 +1,6 @@
 # Xstream
 
-A video streaming application featuring live video streaming and group video chat.
+A video streaming application featuring live video streaming and group chat.
 
 ## Getting Started
 

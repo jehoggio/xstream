@@ -1,11 +1,13 @@
+import Layout from '../components/Layout'
 import WebcamComponent from '../components/Webcam'
 
-const stream = () => {
+const StreamPage = () => {
   return (
-    <>
+    <Layout>
+      <h1>Stream</h1>
       <WebcamComponent />
-    </>
+    </Layout>
   )
 }
 
-export default stream
+export default StreamPage

@@ -1,13 +1,13 @@
-import type { NextPage } from "next";
-import Layout from "../components/Layout";
-import Navbar from "../components/Navbar";
+import type { NextPage } from 'next'
+import Layout from '../components/Layout'
+import Navbar from '../components/Navbar'
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
-    <>
-      <p>This is home</p>
-    </>
-  );
-};
+    <Layout>
+      <h1>Sign In or Sign Up</h1>
+    </Layout>
+  )
+}
 
-export default Home;
+export default HomePage

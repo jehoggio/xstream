@@ -1,8 +1,22 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { ThemeProvider } from "next-themes";
+import Navbar from "../components/Navbar";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import "../styles/globals.css";
+
+interface MyAppProps {
+  Component: any;
+  pageProps: any;
 }
 
-export default MyApp
+function MyApp({ Component, pageProps }: MyAppProps) {
+  return (
+    <ThemeProvider attribute="class" enableSystem={true}>
+      <div className="font-KoHo">
+        <Navbar />
+        <Component {...pageProps} />
+      </div>
+    </ThemeProvider>
+  );
+}
+
+export default MyApp;

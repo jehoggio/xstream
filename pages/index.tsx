@@ -1,6 +1,33 @@
 import type { NextPage } from 'next'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
+import { PrismaClient } from '@prisma/client'
+
+interface User {
+  id: number
+  name?: string
+  email: string
+}
+
+// Fetch all posts (in /pages/index.tsx)
+export async function getStaticProps() {
+  const prisma = new PrismaClient()
+
+  // create a new user
+  // const user = await prisma.user.create({
+  //   id: 1,
+  //   name: 'John Doe',
+  //   email: 'name@email.com',
+
+  // })
+
+  const allUsers = await prisma.user.findMany()
+  console.log(allUsers)
+
+  return {
+    props: { allUsers },
+  }
+}
 
 const HomePage: NextPage = () => {
   return (

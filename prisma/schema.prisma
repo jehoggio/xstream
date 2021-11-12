@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://rprf2x9g4jlu:pscale_pw_kmn1H6gyoaP-TiP8cLImzyW7mZ-1BC1zu0LbIGrA3ps@m6lo7ayqerjr.us-east-3.psdb.cloud/xstream?sslaccept=strict"
+  url      = "mysql://r7dw8em3w0wh:pscale_pw_VQNrRRkoqaK8KRrHeW8rHEAn0txWxfhzZb57K-XJv3E@m6lo7ayqerjr.us-east-3.psdb.cloud/xstream?sslaccept=strict"
 }
 
 model users {

@@ -14,15 +14,16 @@ export async function getStaticProps() {
   const prisma = new PrismaClient()
 
   // create a new user
-  // const user = await prisma.user.create({
-  //   id: 1,
-  //   name: 'John Doe',
-  //   email: 'name@email.com',
+  const newUser: User = await prisma.users.create({
+    data: {
+      id: 1,
+      name: 'John Doe',
+      email: 'man@gmail.com',
+    },
+  })
 
-  // })
-
-  const allUsers = await prisma.user.findMany()
-  console.log(allUsers)
+  const allUsers = await prisma.users.findMany()
+  console.log(newUser, allUsers)
 
   return {
     props: { allUsers },
